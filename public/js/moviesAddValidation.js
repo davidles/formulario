@@ -19,35 +19,35 @@ window.onload = function(){
 
 
 
-   inputTitle.focus();
+//    inputTitle.focus();
 
-   inputTitle.addEventListener('input', () =>{
-      console.log(inputTitle.value);
-   })
-
-
+//    inputTitle.addEventListener('input', () =>{
+//       console.log(inputTitle.value);
+//    })
 
 
-  const validateEmptyField = (e) =>{
-    const field = e.target;
-
-    if(field.value.trim() === ''){
-      field.classList.add('is-invalid');
-
-    }else{
-     field.classList.remove('is-invalid');
-     field.classList.add('is-valid');
-
-    }
-  }
 
 
-inputTitle.addEventListener('blur', validateEmptyField);
-inputRating.addEventListener('blur', validateEmptyField);
-inputAwards.addEventListener('blur', validateEmptyField);
-inputReleaseDate.addEventListener('blur', validateEmptyField);
-inputLength.addEventListener('blur', validateEmptyField);
-inputGenre.addEventListener('blur', validateEmptyField);
+//   const validateEmptyField = (e) =>{
+//     const field = e.target;
+
+//     if(field.value.trim() === ''){
+//       field.classList.add('is-invalid');
+
+//     }else{
+//      field.classList.remove('is-invalid');
+//      field.classList.add('is-valid');
+
+//     }
+//   }
+
+
+// inputTitle.addEventListener('blur', validateEmptyField);
+// inputRating.addEventListener('blur', validateEmptyField);
+// inputAwards.addEventListener('blur', validateEmptyField);
+// inputReleaseDate.addEventListener('blur', validateEmptyField);
+// inputLength.addEventListener('blur', validateEmptyField);
+// inputGenre.addEventListener('blur', validateEmptyField);
 
 
 
@@ -63,35 +63,35 @@ inputGenre.addEventListener('blur', validateEmptyField);
 
 
 /*******  Formulario ********/
-const createMovie = document.querySelector('form.form');
+// const createMovie = document.querySelector('form.form');
 
 
-createMovie.addEventListener('submit', (e) => {
-    const formFields = [...createMovie.elements];
-    formFields.pop()
+// createMovie.addEventListener('submit', (e) => {
+//     const formFields = [...createMovie.elements];
+//     formFields.pop()
 
-    let areErrors = false;
+//     let areErrors = false;
     
-    for(let field of formFields){
-      if(field.value.trim() === ''){
-        field.classList.add('is-invalid');
+//     for(let field of formFields){
+//       if(field.value.trim() === ''){
+//         field.classList.add('is-invalid');
 
-        areErrors = true;
+//         areErrors = true;
   
-      }else{
-       field.classList.remove('is-invalid');
-       field.classList.add('is-valid');
+//       }else{
+//        field.classList.remove('is-invalid');
+//        field.classList.add('is-valid');
   
-      }
+//       }
    
-    }
+//     }
 
-    if(areErrors){
-      e.preventDefault();
+//     if(areErrors){
+//       e.preventDefault();
 
-    }
+//     }
       
-  });
+//   });
   
 
 }
